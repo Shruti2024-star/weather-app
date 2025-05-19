@@ -2,6 +2,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './SearchBox.css';
 import {useState} from 'react'
+const API_KEY = import.meta.env.VITE_API_KEY;
+console.log("API KEY:", API_KEY);
+
 
 
 export default function SearchBar({updatedInfo}){
@@ -10,7 +13,8 @@ export default function SearchBar({updatedInfo}){
     let[inputError,setInputError]=useState(false)
 
     let API_URL="https://api.openweathermap.org/data/2.5/weather";
-    let API_KEY="e177a4d5c89cd92128d4f21748d5f0a7"
+    console.log("Final URL:", `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+
 
     let handleSearch=(event)=>{
         setCity(event.target.value);
@@ -56,6 +60,7 @@ export default function SearchBar({updatedInfo}){
                  return; 
             }
             console.log(city);
+            console.log(API_KEY);
             setCity("");
             let newInfo=await getWeatherInfo();
             updatedInfo(newInfo);
