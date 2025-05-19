@@ -1,5 +1,5 @@
 import SearchBar from './SearchBar.jsx';
-import Infocard from './infocard.jsx';
+import Infocard from './Infocard.jsx';
 import {useState} from 'react'
 
 export default function WeatherApi(){
