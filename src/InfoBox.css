@@ -1,7 +1,7 @@
 .card {
   display: flex;
   align-items: center;     
-  height: 100vh;           
+  height: 70vh;           
   flex-direction: column;   
   text-align: center;       
 }

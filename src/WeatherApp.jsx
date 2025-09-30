@@ -1,6 +1,8 @@
 import SearchBar from './SearchBar.jsx';
-import Infocard from './Infocard.jsx';
-import {useState} from 'react'
+import Infocard from './infocard.jsx';
+import {useState} from 'react';
+
+
 
 export default function WeatherApi(){
     let [info,setInfo]=useState({
@@ -12,6 +14,8 @@ export default function WeatherApi(){
             feelsLike:33.5,
             description:"overcast clouds",
     })
+
+
     
     let updatedInfo=(newInfo)=>{
         setInfo(newInfo)

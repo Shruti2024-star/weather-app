@@ -3,3 +3,34 @@
     display:block;
     text-align:center;
 }
+.weatherContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Current day card */
+.currentWeather {
+  flex: 1 1 300px;
+  max-width: 400px;
+  order: 2;
+}
+
+/* Forecast card */
+.forecastCard {
+  flex: 1 1 300px;
+  max-width: 400px;
+  order: 1; 
+}
+
+@media (min-width: 768px) {
+  .currentWeather {
+    order: 1;
+  }
+  .forecastCard {
+    order: 2;
+  }
+}
+
+
